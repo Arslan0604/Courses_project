@@ -6,6 +6,8 @@ class Category(models.Model):
     title = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
     
+    def __str__(self):
+        return self.title
     
 class Course(models.Model):
     title = models.CharField(max_length=300)
@@ -15,3 +17,5 @@ class Course(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now)
     
+    def __str__(self):
+        return self.title + ' ' + str(self.student_qty)# convert to string representation
