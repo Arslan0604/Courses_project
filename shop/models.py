@@ -18,4 +18,4 @@ class Course(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return self.title + ' ' + str(self.student_qty)# convert to string representation
+        return self.title # convert to string representation
