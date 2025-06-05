@@ -7,4 +7,4 @@ from .models import Course
 
 def index(request):
     courses = Course.objects.all()
-    return render(request, 'courses.html')
+    return render(request, 'courses.html', {'courses': courses})
