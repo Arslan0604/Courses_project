@@ -6,8 +6,8 @@
     crossorigin="anonymous"
   />
 </head>
-<table>
-  <thead>
+<table class="table mt-5 table-bordered table-striped table-hover">
+  <thead class="table-dark">
     <tr>
       <th>Title</th>
       <th>Category</th>
@@ -23,7 +23,7 @@
       <td>{{course.category}}</td>
       <td>{{course.price}}</td>
       <td>{{course.students_qty}}</td>
-      <td><button>Buy</button></td>
+      <td><button class="btn btn-primary">Buy</button></td>
     </tr>
     {% endfor %}
   </tbody>
