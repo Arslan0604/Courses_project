@@ -12,3 +12,5 @@ def index(request):
 def single_course(request, course_id):
     course = Course.objects.get(pk=course_id)
     return render(request, 'single_course.html', {'course': course})
+
+# learn its
