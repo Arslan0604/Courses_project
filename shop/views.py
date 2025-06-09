@@ -14,3 +14,4 @@ def single_course(request, course_id):
     return render(request, 'single_course.html', {'course': course})
 
 # learn its
+# django-admin startapp shop
