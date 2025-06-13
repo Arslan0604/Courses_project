@@ -25,12 +25,12 @@ category_resource = CategoryResource()
 api.register(course_resource)
 api.register(category_resource)
 
-# api/courses
-# api/categrories
+# api/v1/courses
+# api/v1/categrories
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include('shop.urls')),
-    path('api/', include(course_resource.urls)),
-    path('api/', include(category_resource.urls))
+    path('api/', include(api.urls))
+    
 ]
