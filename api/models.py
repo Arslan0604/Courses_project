@@ -1,5 +1,7 @@
 from tastypie.resources import ModelResource
 from shop.models import Category, Course
+from tastypie.authentication import Authentication
+from .authentication import CustomAuthentication
 
 class CategoryResource(ModelResource):
     class Meta:
