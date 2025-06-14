@@ -17,7 +17,20 @@ class CourseResource(ModelResource):
         allowed_methods = ['get', 'post', 'delete']
         authentication = CustomAuthentication()
         authorization = Authorization()
-
-# Create your models here.
+        
+    def hydrate(self, bundle):
+        bundle.obj.category_id = bundle.data['category_id']
+        return bundle
+    
+    def dehydrate(self, bundle):
+        bundle.data['category_id'] = bundle.obj.category
+        return bundle
+    
+    def hydrate_student_qty(self, bundle):
+        if bundle.data.get('student_qty') is None:
+            bundle.data['student_qty'] = 0
+        return bundle
+        
+        # Create your models here.
 
 
