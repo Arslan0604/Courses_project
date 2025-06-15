@@ -30,6 +30,9 @@ class CourseResource(ModelResource):
         if bundle.data.get('student_qty') is None:
             bundle.data['student_qty'] = 0
         return bundle
+    
+    def dehydrate_title(self, bundle):
+        return bundle.data['title'].upper()
         
         # Create your models here.
 
