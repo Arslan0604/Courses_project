@@ -23,7 +23,8 @@ class CourseResource(ModelResource):
         return bundle
     
     def dehydrate(self, bundle):
-        bundle.data['category_id'] = bundle.obj.category
+        bundle.data['category_id'] = bundle.obj.category_id
+        bundle.data['category'] = bundle.obj.category
         return bundle
     
     def hydrate_student_qty(self, bundle):
