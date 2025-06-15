@@ -30,6 +30,10 @@ api.register(category_resource)
 # api/v1/categrories     GET
 # api/v1/categrories/1/  GET
 
+# For POST, DELETE add header
+# Key: Authorization
+# Value: ApiKey admin:asdfasd12341234
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
