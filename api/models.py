@@ -15,6 +15,7 @@ class CourseResource(ModelResource):
         queryset = Course.objects.all()
         resource_name = 'courses'
         allowed_methods = ['get', 'post', 'delete']
+        excludes = ['reviews_qty', 'created_at'] 
         authentication = CustomAuthentication()
         authorization = Authorization()
         
