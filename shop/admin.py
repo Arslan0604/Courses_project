@@ -32,3 +32,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Course, CourseAdmin)
 
 # All you need to keep on with this direction
+# Start to create documentation
