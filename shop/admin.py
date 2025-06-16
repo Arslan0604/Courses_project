@@ -23,7 +23,7 @@ class CategoryAdmin(admin.ModelAdmin):
             'classes': ['collapse']
         })
     ]
-    inlines = []
+    inlines = [CoursesInline]
     
 
 # Register your models here.
