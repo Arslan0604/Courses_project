@@ -10,10 +10,11 @@ class CourseAdmin(admin.ModelAdmin):
     
 class CoursesInline(admin.TabularInline):
     model = Course
+    extra = 1
     
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
-    fieldsets = {
+    fieldsets = [
         (None, {
             'fields': ['title']
             }),
@@ -21,7 +22,8 @@ class CategoryAdmin(admin.ModelAdmin):
             'fields': ['created_at'], 
             'classes': ['collapse']
         })
-    }
+    ]
+    inlines = []
     
 
 # Register your models here.
