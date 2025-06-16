@@ -10,6 +10,7 @@ class CourseAdmin(admin.ModelAdmin):
     
 class CoursesInline(admin.TabularInline):
     model = Course
+    exclude = ['created_at']
     extra = 1
     
 class CategoryAdmin(admin.ModelAdmin):
