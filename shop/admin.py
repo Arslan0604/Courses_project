@@ -8,7 +8,10 @@ admin.site.index_title = "Welcome to the Courses admin area"
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('title', 'price', 'category')
     
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('title', 'created_at')
+    
 
 # Register your models here.
-admin.site.register(models.Category)
+admin.site.register(models.Category, CategoryAdmin)
 admin.site.register(models.Course, CourseAdmin)
